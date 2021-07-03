@@ -10,14 +10,16 @@ ESP8266 connects to wifi and hosts a simple webpage that allows for manual contr
 
 On startup, the ESP8266 also checks its IP address and sends an email with a URL to the webpage (my router was occasionally changing the IP address handed out).  
 
+```
 
+#include <Servo.h> 
+#include <ESP8266mDNS.h> 
+#include <ESP8266WiFi.h> 
+#include <WiFiClient.h> 
+#include <ESP8266WebServer.h> 
+#include <ArduinoOTA.h> 
+ 
+#include "index.h" //Our HTML webpage contents with javascripts 
+#include "configParams.h"  //secret properties 
 
-#include <Servo.h>
-#include <ESP8266mDNS.h>
-#include <ESP8266WiFi.h>
-#include <WiFiClient.h>
-#include <ESP8266WebServer.h>
-#include <ArduinoOTA.h>
-
-#include "index.h" //Our HTML webpage contents with javascripts
-#include "configParams.h"  //secret properties
+```
